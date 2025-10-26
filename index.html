@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Email verification (OTP)</title>
+    <style>
+      body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:48px}
+      .box{max-width:420px;margin:0 auto;padding:20px;border:1px solid #ddd;border-radius:8px}
+      input{width:100%;padding:8px;margin:8px 0;border:1px solid #ccc;border-radius:4px}
+      button{padding:10px 14px;border-radius:6px;border:0;background:#111;color:#fff}
+      .hint{font-size:13px;color:#666}
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Email verification (OTP)</h2>
+      <div id="step-send">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@example.com" />
+        <button id="sendBtn">Send verification code</button>
+        <p class="hint">A 6-digit code will be sent to the provided email.</p>
+      </div>
+
+      <div id="step-verify" style="display:none;margin-top:12px">
+        <label for="code">Enter code</label>
+        <input id="code" type="text" placeholder="123456" />
+        <button id="verifyBtn">Verify & Register</button>
+        <p id="verifyMsg" class="hint"></p>
+      </div>
+
+      <div id="result" style="margin-top:12px;color:green"></div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
